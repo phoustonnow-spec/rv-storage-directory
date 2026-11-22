@@ -382,3 +382,39 @@ a:hover { text-decoration-color: var(--slate-900); }
   white-space: nowrap;
   border: 0;
 }
+
+/* Submit form */
+.submit-form { background: var(--white); border: 1px solid var(--slate-200); border-radius: var(--radius-lg); padding: 28px; margin: 16px 0 32px; box-shadow: var(--shadow-sm); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-row-3 { grid-template-columns: 2fr 2fr 1fr; }
+@media (max-width: 560px) { .form-row, .form-row-3 { grid-template-columns: 1fr; } }
+.form-field { margin-bottom: 16px; border: 0; padding: 0; }
+.form-field label, .form-field legend { display: block; font-size: 0.85rem; font-weight: 600; color: var(--slate-800); margin-bottom: 6px; }
+.form-field label span { color: var(--accent); }
+.form-field input, .form-field select, .form-field textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--slate-300); border-radius: var(--radius); background: var(--white); font-size: 0.95rem; font-family: inherit; color: var(--slate-900); }
+.form-field textarea { resize: vertical; min-height: 80px; }
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus { outline: none; border-color: var(--focus); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); }
+.checkbox-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 8px 16px; margin-top: 4px; }
+.checkbox-grid label { display: flex; align-items: center; gap: 8px; font-weight: 400; font-size: 0.9rem; color: var(--slate-700); margin-bottom: 0; cursor: pointer; }
+.checkbox-grid input { width: auto; padding: 0; }
+.form-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
+.btn-submit { padding: 12px 24px; font-size: 0.95rem; font-weight: 600; border: 0; border-radius: var(--radius); cursor: pointer; }
+.form-note { font-size: 0.8rem; color: var(--slate-500); margin: 0; }
+.form-error { background: #fee2e2; border-left: 4px solid #b91c1c; color: #7f1d1d; padding: 10px 14px; border-radius: var(--radius); margin-top: 12px; font-size: 0.9rem; }
+
+/* Map section */
+.map-section { padding: 24px 20px 0; max-width: 1200px; margin: 0 auto; }
+.map-wrap { border: 1px solid var(--slate-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); }
+#map { height: 420px; width: 100%; background: var(--slate-100); }
+@media (max-width: 560px) { #map { height: 320px; } }
+
+/* Map pins */
+.pin { border-radius: 50%; border: 2px solid var(--white); box-shadow: 0 2px 6px rgba(0,0,0,0.25); }
+.pin-partner { background: var(--accent); }
+.pin-verified { background: var(--verified); }
+.pin-listed { background: var(--slate-500); }
+
+/* Map button on card */
+.btn-map { background: var(--white); color: var(--slate-800); border: 1px solid var(--slate-300); font: inherit; font-size: 0.9rem; font-weight: 600; padding: 8px 14px; border-radius: var(--radius); cursor: pointer; }
+.btn-map:hover { background: var(--slate-50); border-color: var(--focus); }
+.btn-map:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }

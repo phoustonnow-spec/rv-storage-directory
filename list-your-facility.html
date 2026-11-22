@@ -66,11 +66,119 @@
       </article>
     </div>
 
-    <h2>Ready to claim yours?</h2>
-    <p>Email <a href="mailto:hello@rvstoragedirectory.com">hello@rvstoragedirectory.com</a> with your facility name, address, and phone. We will set you up within one business day.</p>
+    <h2 id="submit-form">Submit your facility.</h2>
+    <p>Fill this out and we will review and publish within one business day. Start free. Upgrade when you are ready.</p>
 
-    <h2>Not sure which tier fits?</h2>
-    <p>Start Free. Upgrade when you are ready. The Partner tier makes sense once you have more than 30 tenants and are running the paperwork on your own.</p>
+    <form class="submit-form" id="listing-form" novalidate>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="f-business">Business name <span aria-hidden="true">*</span></label>
+          <input type="text" id="f-business" name="business" required>
+        </div>
+        <div class="form-field">
+          <label for="f-contact">Your name <span aria-hidden="true">*</span></label>
+          <input type="text" id="f-contact" name="contact" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="f-email">Email <span aria-hidden="true">*</span></label>
+          <input type="email" id="f-email" name="email" required>
+        </div>
+        <div class="form-field">
+          <label for="f-phone">Phone <span aria-hidden="true">*</span></label>
+          <input type="tel" id="f-phone" name="phone" required>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="f-address">Street address</label>
+        <input type="text" id="f-address" name="address" placeholder="3211 Van Buren Blvd">
+      </div>
+
+      <div class="form-row form-row-3">
+        <div class="form-field">
+          <label for="f-city">City <span aria-hidden="true">*</span></label>
+          <input type="text" id="f-city" name="city" required>
+        </div>
+        <div class="form-field">
+          <label for="f-county">County <span aria-hidden="true">*</span></label>
+          <input type="text" id="f-county" name="county" required placeholder="Riverside">
+        </div>
+        <div class="form-field">
+          <label for="f-zip">ZIP</label>
+          <input type="text" id="f-zip" name="zip" inputmode="numeric" pattern="[0-9]{5}" maxlength="5">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="f-region">Region <span aria-hidden="true">*</span></label>
+        <select id="f-region" name="region" required>
+          <option value="">Pick one</option>
+          <option value="inland-empire">Inland Empire (Riverside, San Bernardino)</option>
+          <option value="orange-county">Orange County</option>
+          <option value="los-angeles">Los Angeles Area</option>
+          <option value="san-diego">San Diego Area</option>
+          <option value="other">Other (we will add it)</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="f-website">Website</label>
+        <input type="url" id="f-website" name="website" placeholder="https://">
+      </div>
+
+      <div class="form-field">
+        <label for="f-description">Short description</label>
+        <textarea id="f-description" name="description" rows="3" maxlength="500" placeholder="A sentence or two. What makes your lot different?"></textarea>
+      </div>
+
+      <fieldset class="form-field">
+        <legend>Features (check all that apply)</legend>
+        <div class="checkbox-grid">
+          <label><input type="checkbox" name="features" value="RV storage"> RV storage</label>
+          <label><input type="checkbox" name="features" value="Boat storage"> Boat storage</label>
+          <label><input type="checkbox" name="features" value="Trailer storage"> Trailer storage</label>
+          <label><input type="checkbox" name="features" value="Motorhome storage"> Motorhome storage</label>
+          <label><input type="checkbox" name="features" value="Covered spaces"> Covered spaces</label>
+          <label><input type="checkbox" name="features" value="Indoor storage"> Indoor storage</label>
+          <label><input type="checkbox" name="features" value="Gated access"> Gated access</label>
+          <label><input type="checkbox" name="features" value="24/7 access"> 24/7 access</label>
+          <label><input type="checkbox" name="features" value="Surveillance"> Surveillance</label>
+          <label><input type="checkbox" name="features" value="Lighting"> Lighting</label>
+          <label><input type="checkbox" name="features" value="Dump station"> Dump station</label>
+          <label><input type="checkbox" name="features" value="Power hookup"> Power hookup</label>
+          <label><input type="checkbox" name="features" value="Wash station"> Wash station</label>
+          <label><input type="checkbox" name="features" value="U-Haul rental"> U-Haul rental</label>
+        </div>
+      </fieldset>
+
+      <div class="form-field">
+        <label for="f-hours">Hours</label>
+        <input type="text" id="f-hours" name="hours" placeholder="Mon-Sun by appointment">
+      </div>
+
+      <div class="form-field">
+        <label for="f-tier">Which tier?</label>
+        <select id="f-tier" name="tier">
+          <option value="Free">Free listing</option>
+          <option value="Featured">Featured ($29/mo)</option>
+          <option value="Partner">Partner ($199/mo)</option>
+          <option value="Not sure">Not sure, send me info</option>
+        </select>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-primary btn-submit">Send submission</button>
+        <p class="form-note">Opens your email to send. Nothing is posted until we review.</p>
+      </div>
+
+      <div id="form-error" class="form-error" role="alert" hidden></div>
+    </form>
+
+    <h2>Already have a facility listed?</h2>
+    <p>If you see your location on the directory and want to claim it, email <a href="mailto:hello@rvstoragedirectory.com">hello@rvstoragedirectory.com</a> with the facility name and proof you own it.</p>
   </main>
 
   <footer class="site-footer">
@@ -100,5 +208,7 @@
       &copy; 2026 RV Storage Directory. Built in California.
     </div>
   </footer>
+
+  <script src="js/submit.js"></script>
 </body>
 </html>

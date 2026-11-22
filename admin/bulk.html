@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Bulk Upload | Admin</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="/"><span class="logo-mark">RV</span> Storage Directory</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/">Browse</a>
+        <span style="color:var(--slate-500); font-size:0.85rem;">Admin</span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <h1>Bulk upload.</h1>
+    <p>Upload many listings at once. Accepts a JSON array or CSV file. Each row becomes a <strong>Listed for Reference</strong> entry unless you specify otherwise.</p>
+
+    <form class="submit-form" id="bulk-form">
+      <div class="form-field">
+        <label for="f-pass">Admin password</label>
+        <input type="password" id="f-pass" name="password" required autocomplete="current-password">
+      </div>
+
+      <div class="form-field">
+        <label for="f-mode">Mode</label>
+        <select id="f-mode" name="mode">
+          <option value="merge">Merge (add new, update existing by id)</option>
+          <option value="replace">Replace (wipe all bulk, upload this set)</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="f-file">Upload file (JSON or CSV)</label>
+        <input type="file" id="f-file" name="file" accept=".json,.csv,text/csv,application/json">
+      </div>
+
+      <div class="form-field">
+        <label for="f-paste">Or paste JSON array</label>
+        <textarea id="f-paste" name="paste" rows="10" placeholder='[{"name":"Acme RV Storage","city":"Riverside","county":"Riverside","region":"inland-empire","lat":33.95,"lng":-117.4}]'></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-primary btn-submit">Upload</button>
+        <p class="form-note">Expected fields: name, city (required); county, region, address, zip, phone, website, email, description, hours, lat, lng, features.</p>
+      </div>
+
+      <div id="bulk-result" class="form-error" role="status" hidden></div>
+    </form>
+  </main>
+
+  <script src="/admin/bulk.js"></script>
+</body>
+</html>

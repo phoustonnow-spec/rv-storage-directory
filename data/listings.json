@@ -1,0 +1,26 @@
+{
+  "updated": "2026-11-21",
+  "regions": {
+    "inland-empire": { "name": "Inland Empire", "counties": ["Riverside", "San Bernardino"] },
+    "orange-county": { "name": "Orange County", "counties": ["Orange"] },
+    "los-angeles": { "name": "Los Angeles Area", "counties": ["Los Angeles"] },
+    "san-diego": { "name": "San Diego Area", "counties": ["San Diego"] }
+  },
+  "listings": [
+    { "id": "circle-c-storage", "name": "Circle C Storage", "tier": "partner", "verified": true, "address": "3211 Van Buren Blvd", "city": "Riverside", "county": "Riverside", "region": "inland-empire", "zip": "92503", "phone": "(951) 343-7200", "website": "https://ccsriverside.com", "lat": 33.9219, "lng": -117.4521, "description": "Family-run outdoor RV, boat, motorhome, and trailer storage on Van Buren Boulevard. Gated, surveilled, well-lit. On-site U-Haul rental. Private garage available for a single collector tenant.", "features": ["RV storage", "Boat storage", "Trailer storage", "U-Haul rental", "Private garage", "Gated access", "Surveillance", "Lighting"], "hours": "Mon-Sun by appointment" },
+    { "id": "placeholder-riverside-1", "name": "Sample Riverside Facility", "tier": "listed", "verified": false, "city": "Riverside", "county": "Riverside", "region": "inland-empire", "lat": 33.95, "lng": -117.40, "description": "Placeholder listing. Replace with scraped OpenStreetMap data." },
+    { "id": "placeholder-corona-1", "name": "Sample Corona Facility", "tier": "listed", "verified": false, "city": "Corona", "county": "Riverside", "region": "inland-empire", "lat": 33.87, "lng": -117.57, "description": "Placeholder listing." },
+    { "id": "placeholder-temecula-1", "name": "Sample Temecula Facility", "tier": "listed", "verified": false, "city": "Temecula", "county": "Riverside", "region": "inland-empire", "lat": 33.49, "lng": -117.15, "description": "Placeholder listing." },
+    { "id": "placeholder-rancho-1", "name": "Sample Rancho Cucamonga Facility", "tier": "listed", "verified": false, "city": "Rancho Cucamonga", "county": "San Bernardino", "region": "inland-empire", "lat": 34.10, "lng": -117.59, "description": "Placeholder listing." },
+    { "id": "placeholder-ontario-1", "name": "Sample Ontario Facility", "tier": "listed", "verified": false, "city": "Ontario", "county": "San Bernardino", "region": "inland-empire", "lat": 34.07, "lng": -117.65, "description": "Placeholder listing." },
+    { "id": "placeholder-anaheim-1", "name": "Sample Anaheim Facility", "tier": "listed", "verified": false, "city": "Anaheim", "county": "Orange", "region": "orange-county", "lat": 33.84, "lng": -117.91, "description": "Placeholder listing." },
+    { "id": "placeholder-huntington-1", "name": "Sample Huntington Beach Facility", "tier": "listed", "verified": false, "city": "Huntington Beach", "county": "Orange", "region": "orange-county", "lat": 33.66, "lng": -118.00, "description": "Placeholder listing." },
+    { "id": "placeholder-fountain-1", "name": "Sample Fountain Valley Facility", "tier": "listed", "verified": false, "city": "Fountain Valley", "county": "Orange", "region": "orange-county", "lat": 33.71, "lng": -117.95, "description": "Placeholder listing." },
+    { "id": "placeholder-westminster-1", "name": "Sample Westminster Facility", "tier": "listed", "verified": false, "city": "Westminster", "county": "Orange", "region": "orange-county", "lat": 33.76, "lng": -118.01, "description": "Placeholder listing." },
+    { "id": "placeholder-sunvalley-1", "name": "Sample Sun Valley Facility", "tier": "listed", "verified": false, "city": "Sun Valley", "county": "Los Angeles", "region": "los-angeles", "lat": 34.21, "lng": -118.37, "description": "Placeholder listing." },
+    { "id": "placeholder-chatsworth-1", "name": "Sample Chatsworth Facility", "tier": "listed", "verified": false, "city": "Chatsworth", "county": "Los Angeles", "region": "los-angeles", "lat": 34.26, "lng": -118.60, "description": "Placeholder listing." },
+    { "id": "placeholder-simi-1", "name": "Sample Simi Valley Facility", "tier": "listed", "verified": false, "city": "Simi Valley", "county": "Los Angeles", "region": "los-angeles", "lat": 34.27, "lng": -118.78, "description": "Placeholder listing." },
+    { "id": "placeholder-sandiego-1", "name": "Sample San Diego Facility", "tier": "listed", "verified": false, "city": "San Diego", "county": "San Diego", "region": "san-diego", "lat": 32.72, "lng": -117.16, "description": "Placeholder listing." },
+    { "id": "placeholder-escondido-1", "name": "Sample Escondido Facility", "tier": "listed", "verified": false, "city": "Escondido", "county": "San Diego", "region": "san-diego", "lat": 33.12, "lng": -117.09, "description": "Placeholder listing." }
+  ]
+}
