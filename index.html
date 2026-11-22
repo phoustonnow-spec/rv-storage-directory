@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RV Storage Directory | Find Vehicle Storage in California</title>
+  <meta name="description" content="Directory of RV, boat, and vehicle storage facilities across California. Filter by region, county, or city. Operator-verified listings.">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="/"><span class="logo-mark">RV</span> Storage Directory</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/">Browse</a>
+        <a href="about.html">About</a>
+        <a href="list-your-facility.html" class="btn-list">List your facility</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <h1 id="hero-title">Find RV storage in California.</h1>
+        <p>Filter by region, county, or city. Operator-verified listings sit on top. The rest are listed for reference.</p>
+        <form class="filters" role="search" aria-label="Filter listings" onsubmit="return false;">
+          <div class="filter-field">
+            <label for="filter-region">Region</label>
+            <select id="filter-region">
+              <option value="">All regions</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="filter-county">County</label>
+            <select id="filter-county">
+              <option value="">All counties</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="filter-city">City</label>
+            <select id="filter-city">
+              <option value="">All cities</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="filter-q">Search</label>
+            <input type="search" id="filter-q" placeholder="Name, feature, address">
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="results-wrap" aria-labelledby="results-title">
+      <h2 id="results-title" class="sr-only">Results</h2>
+      <div class="info-note" role="note">
+        This directory is in early beta. Most listings are pulled from public data and marked <strong>Listed for Reference</strong>. Operators can claim their listing for free to become <strong>Verified</strong>.
+      </div>
+      <div class="results-header">
+        <div class="results-count" id="results-count" aria-live="polite" aria-atomic="true"></div>
+      </div>
+      <div class="results-grid" id="results-grid"></div>
+      <p id="empty-state" hidden style="text-align:center;color:#64748b;padding:40px 20px;">No facilities match these filters. Try widening your search.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h4>RV Storage Directory</h4>
+        <p>Find outdoor and covered storage for RVs, boats, trailers, and collector vehicles across California. Operator-run directory, not a chain.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/">Browse facilities</a></li>
+          <li><a href="about.html">About the directory</a></li>
+          <li><a href="list-your-facility.html">List your facility</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Operators</h4>
+        <ul>
+          <li><a href="list-your-facility.html#free">Free listing</a></li>
+          <li><a href="list-your-facility.html#featured">Featured listing</a></li>
+          <li><a href="list-your-facility.html#partner">Partner (CRM + website)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 RV Storage Directory. Built in California.
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
