@@ -1,5 +1,5 @@
 // GET /api/listings — returns merged listings (static + bulk from Blob)
-import { list } from "@vercel/blob";
+import { get } from "@vercel/blob";
 import staticData from "../data/listings.json" with { type: "json" };
 
 const BULK_FILENAME = "bulk-listings.json";
@@ -15,14 +15,11 @@ export default async function handler(req, res) {
   let bulkListings = [];
   try {
     if (process.env.BLOB_READ_WRITE_TOKEN) {
-      const blobs = await list({ prefix: BULK_FILENAME });
-      const found = blobs.blobs.find(b => b.pathname === BULK_FILENAME);
-      if (found) {
-        const r = await fetch(found.url, { headers: { Authorization: "Bearer " + process.env.BLOB_READ_WRITE_TOKEN } });
-        if (r.ok) {
-          const parsed = await r.json();
-          if (Array.isArray(parsed)) bulkListings = parsed;
-        }
+      const result = await get(BULK_FILENAME, { access: "private" });
+      if (result && result.stream) {
+        const text = await new Response(result.stream).text();
+        const parsed = JSON.parse(text);
+        if (Array.isArray(parsed)) bulkListings = parsed;
       }
     }
   } catch (err) {
