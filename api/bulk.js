@@ -123,7 +123,7 @@ export default async function handler(req, res) {
 
   try {
     const blob = await put(BULK_FILENAME, JSON.stringify(final), {
-      access: "public",
+      access: "private",
       contentType: "application/json",
       allowOverwrite: true
     });

@@ -18,7 +18,7 @@ export default async function handler(req, res) {
       const blobs = await list({ prefix: BULK_FILENAME });
       const found = blobs.blobs.find(b => b.pathname === BULK_FILENAME);
       if (found) {
-        const r = await fetch(found.url);
+        const r = await fetch(found.url, { headers: { Authorization: "Bearer " + process.env.BLOB_READ_WRITE_TOKEN } });
         if (r.ok) {
           const parsed = await r.json();
           if (Array.isArray(parsed)) bulkListings = parsed;
